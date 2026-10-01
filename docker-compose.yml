@@ -1,0 +1,19 @@
+# OPG Anđelić: statička stranica (nginx). Zaseban stack, kači se samo na
+# mrežu postojećeg "iq" stacka da ga Caddy može doseći. Ne objavljuje portove.
+
+services:
+  web:
+    # [PROVJERITI] vlasnik GitHub repozitorija (isti obrazac kao candid/kliknik)
+    image: ghcr.io/sasasandzaktar/opg-andelic:latest
+    container_name: opg-andjelic-web
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - iq_default
+
+networks:
+  # Mreža koju je napravio "iq" stack. external znači: koristi
+  # postojeću, nemoj je praviti ni mijenjati.
+  iq_default:
+    external: true

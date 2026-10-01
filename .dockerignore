@@ -1,0 +1,4 @@
+# Build kontekst sadrži samo ono što Dockerfile treba.
+*
+!site
+!nginx.conf

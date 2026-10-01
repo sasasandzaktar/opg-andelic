@@ -1,0 +1,11 @@
+node_modules/
+.claude/
+.DS_Store
+Thumbs.db
+*.log
+.env
+
+# Interne bilješke (repo je javan kao kliknik/candid, klijent ih ne treba vidjeti)
+istrazivanje/
+SCOPE_SONNET.md
+PORUKA_KLIJENTU.md
